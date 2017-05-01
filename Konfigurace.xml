@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<version_of_app version="1.0" />
+	<online port="5000" />
+	<number_of_users users="1" />
+	<console_in_app console="false" />
+	<language lang="EN" />
+	<subtitles enabled="true" lang="CZ" />
+	<login>
+		<user_login>email@lol.co</user_login>
+		<user_password>*******</user_password>
+		<auto_save enabled="true" />
+		<facebook>false</facebook>
+		<google_plus>false</google_plus>
+		<login_with_social_networks>true</login_with_social_networks>
+	</login>
+	<date>
+		<day>20</day>
+		<month>04</month>
+		<year>2016</year>
+		<century>21</century>
+		<automatic_date enabled="true" />
+	</date>
+	<time>
+		<hours>13</hours>
+		<minutes>4</minutes>
+		<seconds>16</seconds>
+		<automatic_time enabled="true" />
+	</time>
+	<screen>
+		<bright value="50" />
+		<resolution>1366_768</resolution>
+		<auto_bright enabled="true" />
+		<night_mode enabled="false" />
+		<texture_control enabled="true" /> 
+		<directx_version>10</directx_version>
+		<effects>High</effects>
+		<shadows>Middle</shadows>
+		<textures>Low</textures>
+		<graphics>High</graphics>
+	</screen>
+	<sound>
+		<standart_volume>50</standart_volume>
+		<quiet_mode enabled="false" />
+		<surround_sound enabled="false" />
+		<sound_effects enabled="false" />
+		<automatic_switch enabled="true" />
+		<automatic_headphones enabled="true" />
+		<bass enabled="true" />
+	</sound>
+	<controls>
+		<controller>gamepad</controller>
+		<controller_control>
+			<position_x>5</position_x>
+			<position_y>5</position_y>
+			<auto_positioning horizontal="false" vertical="false" />
+			<speed>10</speed>
+			<count_of_analogs count="2" />
+		</controller_control>
+		<buttons_control>
+			<button_1>A</button_1>
+			<button_2>B</button_2>
+			<button_3>X</button_3>
+			<button_4>Y</button_4>
+			<left_trigger>Action 1</left_trigger>
+			<right_trigger>Action 2</right_trigger>
+			<start>Enter</start>
+		</buttons_control>
+	</controls>
+</config>
