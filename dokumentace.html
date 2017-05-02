@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html lang="CZ">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dokumentace</title>
+	</head>
+	<body>
+		<header>
+			<h1>Dokumentace</h1>
+		</header>
+
+		<nav id="menu">
+			<h2>Obsah</h2>
+			<ul>
+				<li><a href="#start">Úvod</a></li>
+				<li><a href="#metodika">Metodika</a></li>
+				<li><a href="#elements">Popis elementů a atributů</a></li>
+				<li><a href="#transformace">Popis transformace</a></li>
+				<li><a href="#end">Závěr</a></li>
+				<li><a href="#footer">Pátička</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<article>
+				<section id="start">
+					<h2>Úvod</h2>
+					<p>
+						V této prací se zabývám tvorbou XML, XML schema, XSLT transformace a HTML stranky v rámcí projektu z předmětu značkovací jázyky.
+					</p>
+				</section>
+
+				<section id="metodika">
+					<h2>Metodika</h2>
+					<p>Projekt býl nápsan v aplikaci <a href="https://www.sublimetext.com">Sublime text</a>. Na záčatku býl výtvořen XML s konfiguraci fiktívní aplikace, která býla výmyšlená. Dále, pomoci servisu ze stránky <a href="http://www.freeformatter.com/xsd-generator.html">Freeformater</a> býl udělán XSD kód. Pák, jsem vytvořil XSL transformace do JSON. Pro úpravu XSL souboru jsem použíl ještě jeden servis ze stránky <a href="http://www.freeformatter.com/xsl-transformer.html">Freeformatter</a> do kterého býl vložen XML a XSL kód, a z těch kódů výsledkem býl JSON .
+					</p>
+				</section>
+
+				<section id="elements">
+					<h2>Popis elementů a atributů</h2>
+
+					<table border="1">
+						<tr>
+							<th>Název elementů nebo atributů</th>
+							<th>Popis</th>
+						</tr>
+						<tr>
+							<td>version_of_app</td>
+							<td>Element, ve kterém uložená verze aplikace</td>
+						</tr>
+						<tr>
+							<td>version</td>
+							<td>Atribut elementu version_of_app, který nese informaci o verze.</td>
+						</tr>
+						<tr>
+							<td>number_of_users</td>
+							<td>Element, ve kterém uložená informace o počtů současných úživatelů.</td>
+						</tr>
+						<tr>
+							<td>users</td>
+							<td>Atribut elementu number_of_users, který úkazuje na aktualní počet úživatelů.</td>
+						</tr>
+						<tr>
+							<td>console_in_app</td>
+							<td>Element, ve kterém uložená informace o povolení použití konzole uživatelům.</td>
+						</tr>
+						<tr>
+							<td>console</td>
+							<td>Atribut elementu console_in_app, který úkazuje jestli použiti konzole zápnuté/výpnuté.</td>
+						</tr>
+						<tr>
+							<td>language</td>
+							<td>Element, který popisuje jázyk aplikace.</td>
+						</tr>
+						<tr>
+							<td>lang</td>
+							<td>Atribut elementů language a subtitles, který povoluje změny jázyku aplikace.</td>
+						</tr>
+						<tr>
+							<td>subtitles</td>
+							<td>Element, který ukázuje jestli zapnuté titulky a v jakém jázyce</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu subtitles, který úkazuje jestli titulky zápnuté nebo výpnuté.</td>
+						</tr>
+						<tr>
+							<td>login</td>
+							<td>Element, obsáhujíci informace k příhlašení.</td>
+						</tr>
+						<tr>
+							<td>user_login</td>
+							<td>Element, který má v sobě informace o uživatelském jménu.</td>
+						</tr>
+						<tr>
+							<td>user_password</td>
+							<td>Element, který má v sobě informace o heslu uživateli.</td>
+						</tr>
+						<tr>
+							<td>auto_save</td>
+							<td>Element, který povoluje automatické přihlášení.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu auto_save, který úkazuje jestli automatice přihlášení zápnuté nebo výpnuté.</td>
+						</tr>
+						<tr>
+							<td>facebook</td>
+							<td>Element, který úkazuje jestli možnost přihlašení přes facebook.</td>
+						</tr>
+						<tr>
+							<td>google_plus</td>
+							<td>Element, který úkazuje jestli možnost přihlašení přes google plus</td>
+						</tr>
+						<tr>
+							<td>login_with_social_networks</td>
+							<td>Element, který úkazuje jestli vůbec možnost se přihlasít přes nějakou socialní siť</td>
+						</tr>
+						<tr>
+							<td>date</td>
+							<td>Element, který obsahuje informace o datumu.</td>
+						</tr>
+						<tr>
+							<td>day</td>
+							<td>Potomek elementu date, který vyjadřuje nastavený den v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>month</td>
+							<td>Potomek elementu date, který vyjadřuje nastavený měsíc v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>year</td>
+							<td>Potomek elementu date, který vyjadřuje nastavený rok v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>century</td>
+							<td>Potomek elementu date, který vyjadřuje nastavené století aplikaci.</td>
+						</tr>
+						<tr>
+							<td>automatic_date</td>
+							<td>Potomek elementu date, který dovolí aplikaci automatický úkladát informaci o datumu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automatic_date který, má funkci na zapnutí/výpnutí automatického datumu.</td>
+						</tr>
+						<tr>
+							<td>time</td>
+							<td>Element, který obsahuje informace o aktuálním času v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>hours</td>
+							<td>Potomek elementu time, který obsahuje informaci o nastavených hodinách.</td>
+						</tr>
+						<tr>
+							<td>minutes</td>
+							<td>Potomek elementu time, který obsahuje informaci o nastavených minutách.</td>
+						</tr>
+						<tr>
+							<td>seconds</td>
+							<td>Potomek elementu time, který obsahuje informaci o nastavených vteřinách.</td>
+						</tr>
+						<tr>
+							<td>automatic_time</td>
+							<td>Potomek elementu time, který dovolí aplikaci automatický úkladát informaci o čase.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automatic_time který, má funkci na zapnutí/výpnutí automatického času.</td>
+						</tr>
+						<tr>
+							<td>screen</td>
+							<td>Element, který má v sobě informace o nastavení obrazovky</td>
+						</tr>
+						<tr>
+							<td>bright</td>
+							<td>Potomek elementu screen, který výjadřuje jas obrazovky.</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>Atribut elementu bright, který úkazuje aktualní hodnotu jasu.</td>
+						</tr>
+						<tr>
+							<td>resolution</td>
+							<td>Potomek elementu screen, který vyjádřuje aktualné rozlišení obrazovky.</td>
+						</tr>
+						<tr>
+							<td>auto_bright</td>
+							<td>Potomek elementu screen, který povoluje nastavení automatického jasu v aplikaci.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu auto_bright který, má funkci na zapnutí/výpnutí automatického jasu.</td>
+						</tr>
+						<tr>
+							<td>night_mode</td>
+							<td>Potomek elementu screen, který povoluje nastavení nočního režimu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu night_mode který, má funkci na zapnutí/výpnutí nočního režimu.</td>
+						</tr>
+						<tr>
+							<td>texture_control</td>
+							<td>Potomek elementu screen, který povoluje změny v nastavení grafiky.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu texture_control, který má funkci na zapnuti/výpnuti ovládání grafikou.</td>
+						</tr>
+						<tr>
+							<td>directx_version</td>
+							<td>Potomek elementu screen, který má v sobě úloženou aktualní verze DirectX, kterou použivá aplikace.</td>
+						</tr>
+						<tr>
+							<td>effects</td>
+							<td>Potomek elementu screen, který má v sobě informace o úrovně efektu.</td>
+						</tr>
+						<tr>
+							<td>shadows</td>
+							<td>Potomek elementu screen, který má v sobě informace o úrovně stínů.</td>
+						</tr>
+						<tr>
+							<td>textures</td>
+							<td>Potomek elementu screen, který má v sobě informace o úrovně struktury.</td>
+						</tr>
+						<tr>
+							<td>graphics</td>
+							<td>Potomek elementu screen, který má v sobě informace o celkovém úrovně grafiky.</td>
+						</tr>
+						<tr>
+							<td>sound</td>
+							<td>Element, který nese informace o nastavení zvuku.</td>
+						</tr>
+						<tr>
+							<td>standart_volume</td>
+							<td>Potomek elementu zvuk, který nastavuje standartní úrověn hlasitostí.</td>
+						</tr>
+						<tr>
+							<td>quiet_mode</td>
+							<td>Potomek elementu zvuk, který dovoluje zapnutí tichého režimu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu quiet_mode, který má funkci na zápnuti/výpnuti tichého režimu.</td>
+						</tr>
+						<tr>
+							<td>surround_sound</td>
+							<td>Potomek elementu zvuk, který dovoluje zapnutí prostorového zvuku.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu surround_sound, který má funkci zápnuti/výpnuti prostorového zvuku.</td>
+						</tr>
+						<tr>
+							<td>sound_effects</td>
+							<td>Potomek elementu zvuk, který dovoluje zápnutí zvukových efektů.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu sound_effects, má funkci zápnuti/výpnuti zvukových efektů.</td>
+						</tr>
+						<tr>
+							<td>automatic_switch</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci automatické přepinaní mezi zvukem z vnitřích a vnějších reproduktorů.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automatic_switch, který má funkci zápnuti/výpnuti automatického přepináni.</td>
+						</tr>
+						<tr>
+							<td>automatic_headphones</td>
+							<td>Potomek elementu zvuk, který dovoluje aplikaci zapnutí automatického přepinání na sluchatka.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu automatic_headphones, který má funkci zápnuti/výpnuti automatického přepinaní na sluchatka.</td>
+						</tr>
+						<tr>
+							<td>bass</td>
+							<td>Potomek elementu zvuk, který dovoluje zápnuti basu.</td>
+						</tr>
+						<tr>
+							<td>enabled</td>
+							<td>Atribut elementu bass, který má funkci zápnuti/výpnuti basu.</td>
+						</tr>
+						<tr>
+							<td>controls</td>
+							<td>Element, který nese informaci o nástavení ovládaní.</td>
+						</tr>
+						<tr>
+							<td>controller</td>
+							<td>Potomek elementu controls, který nese informaci o ovládače.</td>
+						</tr>
+						<tr>
+							<td>controller_control</td>
+							<td>Potomek elementu controls, který nese informace o ovládaní ovládače.</td>
+						</tr>
+						<tr>
+							<td>position_x</td>
+							<td>Potomek elementu controller_control, který má v sobě standartní pozice na ose x.</td>
+						</tr>
+						<tr>
+							<td>positon_y</td>
+							<td>Potomek elementu controller_control, který má v sobě standartní pozice na ose x.</td>
+						</tr>
+						<tr>
+							<td>auto_positioning</td>
+							<td>Potomek elementu controller_control, který umožňuje nastavení automatické polohy.</td>
+						</tr>
+						<tr>
+							<td>horizontal</td>
+							<td>Atribut elementu auto_positioning, který úmožňuje zápnuti/výpnuti automaickou polohu horizontální.</td>
+						</tr>
+						<tr>
+							<td>vertical</td>
+							<td>Atribut elementu auto_positioning, který úmožňuje zápnuti/výpnuti automaickou polohu vertikální.</td>
+						</tr>
+						<tr>
+							<td>speed</td>
+							<td>Potomek elementu controller_control, který má v sobě uloženou rýchlost ovládače.</td>
+						</tr>
+						<tr>
+							<td>count_of_analogs</td>
+							<td>Potomek elementu controller_control, který nese informaci o počtu analogových páček.</td>
+						</tr>
+						<tr>
+							<td>count</td>
+							<td>Atribut elementu count_of_analogs, který má v sobě aktualní počet analogových páček.</td>
+						</tr>
+						<tr>
+							<td>buttons_control</td>
+							<td>Potomek elementu controls, který nese informaci o ovládaní tlačitek.</td>
+						</tr>
+						<tr>
+							<td>buttons_1</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida prvni tlačitko ovladače.</td>
+						</tr>
+						<tr>
+							<td>buttons_2</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida druhé tlačítko ovladače.</td>
+						</tr>
+						<tr>
+							<td>buttons_3</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida třetí tlačítko ovladače.</td>
+						</tr>
+						<tr>
+							<td>buttons_4</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida čtvrté tlačítko ovladače.</td>
+						</tr>
+						<tr>
+							<td>left_trigger</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida levé krajní tlačítko ovladače.</td>
+						</tr>
+						<tr>
+							<td>right_trigger</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida pravé krajní tlačítko ovladače.</td>
+						</tr>
+						<tr>
+							<td>start</td>
+							<td>Potomek elementu buttons_control, který nese informaci o tom, za které tlačitko v sýstemu odpovida tlačítko start ovladače.</td>
+						</tr>
+					</table>
+				</section>
+
+				<section id="transformace">
+					<h2>Popis transformace</h2>
+					<p>Pro transformace do JSON jsem použil nástroj ze stránky <a href="http://www.freeformatter.com/xsl-transformer.html">Freeformatter</a>. Po prve musel jsem vložit svůj XML kód, pak napsát XSL kód a z toho býl výtvořen JSON kód.</p>
+				</section>
+
+				<section id="end">
+					<h2>Závěr</h2>
+					<p>Táto semistrální práce býla dost zájimavá a kvůli ně, mám chuť se dále rozvijet v oblasti programování.</p>
+				</section>
+			</article>
+		</main>
+
+		<footer id="footer">
+			<hr>
+			<table>
+				<tr>
+					<td>Viacheslav Spitsyn</td>
+				</tr>
+				<tr>
+					<td>All rights reserved © 2017</td>
+				</tr>
+				<tr>
+					<td><a href="https://github.com/XRemOX/Konfigurace">Odkáz na Github</a></td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>
